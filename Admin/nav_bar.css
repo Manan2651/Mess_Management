@@ -1,0 +1,157 @@
+/* html {
+    height: 100%;
+    margin: 0;
+}
+
+
+nav {
+    background-color: blue;
+    height: 50px;
+    margin: 0;
+    color: aqua;
+    text-align: center;
+    display: flex;
+
+}
+
+.navbar {
+    display: flex;
+} */
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #ff0000;
+    height: 70px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+}
+
+.nav-toggle-icon {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+}
+
+.nav-toggle-icon:before,
+.nav-toggle-icon:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.nav-toggle-icon:before {
+    top: -8px;
+}
+
+.nav-toggle-icon:after {
+    bottom: -8px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 40px;
+}
+
+.nav-menu li:first-child {
+    margin-left: 0;
+}
+
+.nav-menu li a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #1abc9c;
+}
+
+@media screen and (max-width: 767px) {
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .nav-logo {
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #222;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    /* .nav-toggle-icon:before {
+        top: 0;
+        /* transform: rotate(70deg); */
+    /* } */
+
+}
